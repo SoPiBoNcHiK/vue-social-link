@@ -6,8 +6,10 @@
       absolute
       temporary
     ></v-navigation-drawer>
-    <v-content app>
-      <v-btn v-on:click="nav = !nav">Меню</v-btn>
+    <v-content app class="px-12 py-3">
+      <v-container fluid>
+      <router-view></router-view>
+      </v-container>
     </v-content>
   </v-app>
 </template>
