@@ -28,6 +28,19 @@
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
+      <v-divider class="my-3"></v-divider>
+      <v-list-item link to="/">
+        <v-list-item-icon>
+          <v-icon>mdi-home-outline</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>Главная</v-list-item-content>
+      </v-list-item>
+      <v-list-item link to="/home">
+        <v-list-item-icon>
+          <v-icon>mdi-heart-outline</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>О нас</v-list-item-content>
+      </v-list-item>
     </v-list>
     </v-navigation-drawer>
     <v-content app class="px-12 py-3">
