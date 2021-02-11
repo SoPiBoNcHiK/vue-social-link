@@ -35,12 +35,25 @@
         </v-list-item-icon>
         <v-list-item-content>Главная</v-list-item-content>
       </v-list-item>
-      <v-list-item link to="/home">
+      <v-list-item link to="/myprofile">
         <v-list-item-icon>
-          <v-icon>mdi-heart-outline</v-icon>
+          <v-icon>mdi-account</v-icon>
         </v-list-item-icon>
-        <v-list-item-content>О нас</v-list-item-content>
+        <v-list-item-content>Мой профиль</v-list-item-content>
       </v-list-item>
+      <v-list-item link to="/users">
+        <v-list-item-icon>
+          <v-icon>mdi-account-multiple-plus</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>Найти друзей</v-list-item-content>
+      </v-list-item>
+      <v-list-item link to="/login">
+        <v-list-item-icon>
+          <v-icon>mdi-account-plus</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>Залогиниться</v-list-item-content>
+      </v-list-item>
+      
     </v-list>
     </v-navigation-drawer>
     <v-content app class="px-12 py-3">
