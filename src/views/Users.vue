@@ -1,7 +1,7 @@
 <template>
 <v-container app >
     <v-row no-gutters>
-      <v-col cols="2">
+      <v-col cols="3">
         <User
         v-for="(item, i) in users"
         v-bind:key="i"

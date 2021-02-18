@@ -20,13 +20,18 @@
             <v-btn @click="authenticate">
                 Войти
             </v-btn>
+            <v-btn class="ml-4" link to="../reg" >
+                Зарегистрироваться
+            </v-btn>
         </v-card>
+        
     </div>
 </template>
 
 <script>
 export default {
     name: 'Login',
+
     methods:{
         authenticate(){
             this.axios.get('http://37.77.104.246/api/jsonstorage/?id=6f9e4dc77f30e9ce597b7339a4676960')
@@ -36,14 +41,23 @@ export default {
                     let found = false;
                     for(let index in users){
                         if(this.login == users[index].login && this.password == users[index].password){
+                            this.$emit('login',index);
                             this.$router.push('/users/' + this.myId);
                             found = true;
+                            this.logined(users[index])
                             break;
                         }
                     }
                     if(!found) window.alert('Неверный логин или пароль')
                 }
             )
+        },
+        logined(index){
+            console.log(index.photo)
+            this.$emit('data',{
+                
+                prop: index,
+            })
         }
     }
 }

@@ -17,14 +17,14 @@
     >
       <v-list-item two-line>
         <v-list-item-avatar>
-          <img src="https://randomuser.me/api/portraits/men/5.jpg">
+          <img :src="photo">
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title>
             SocialLink
           </v-list-item-title>
           <v-list-item-subtitle>
-            Кто-то там
+            {{name}}
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -58,7 +58,7 @@
     </v-navigation-drawer>
     <v-content app class="px-12 py-3">
       <v-container fluid>
-      <router-view></router-view>
+      <router-view @data='onLogin'></router-view>
       </v-container>
     </v-content>
   </v-app>
@@ -74,7 +74,16 @@ export default {
   },
 
   data: () => ({
-    nav: false
+    nav: false,
+    photo: 'https://randomuser.me/api/portraits/men/5.jpg',
+    name: 'Кто-то',
   }),
+  methods:{
+    onLogin(data){
+      this.photo = data.prop.photo,
+      console.log(data.prop.photo),
+      this.name = data.prop.name
+    }
+  }
 };
 </script>
